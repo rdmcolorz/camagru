@@ -2,7 +2,7 @@
     DEFINE('DB_USERNAME', 'root');
     DEFINE('DB_PASSWORD', 'woethemysql34');
     DEFINE('DB_HOST', 'localhost');
-    DEFINE('DB_DATABASE', 'mysql');
+    DEFINE('DB_DATABASE', 'camagru');
 
     # set mysqli class
     # https://documentation.mamp.info/en/MAMP-Mac/How-Tos/Connect-to-MySQL-from-PHP/
