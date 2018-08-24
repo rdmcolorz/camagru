@@ -2,7 +2,6 @@
    ob_start();
    session_start();
 ?>
-
 <?
    // error_reporting(E_ALL);
    // ini_set("display_errors", 1);
@@ -10,7 +9,7 @@
 
 <html lang = "en">
    <head>
-      <title>Tutorialspoint.com</title>
+      <title>CAMAGRU - Famous made easy!</title>
       <link href = "css/bootstrap.min.css" rel = "stylesheet">
       <style>
          body {
@@ -22,10 +21,10 @@
             text-align:center;
          }
          .form-signin {
-            max-width: 330px;
+            width: 330px;
             padding: 15px;
             margin: 0 auto;
-            color: #017572;
+            color: white;
             border-radius: 10px;
          }
          .form-signin .form-signin-heading,
@@ -73,11 +72,27 @@
              border-radius: 10px;
              margin: 5px;
          }
+         .signup_button {
+             width: 190px;
+             height: 40px;
+             font-size: 15px;
+             font-weight: bold;
+             color: #2b2b2b;
+             background-color: #ffbf00;
+             border-color: #ffbf00;
+             border-radius: 10px;
+             margin: 5px;
+         }
+         h2 {
+             font-size: 30px;
+             color: white;
+             text-align:center;
+         }
       </style>
    </head>
    <body>
+         <h2>CAMAGRU</h2>
       <div class = "container form-signin">
-         
          <?php
             $msg = '';
             
@@ -86,12 +101,11 @@
 				
                if ($_POST['username'] == 'tutorialspoint' && 
                   $_POST['password'] == '1234') {
-                  $_SESSION['valid'] = true;
-                  $_SESSION['timeout'] = time();
-                  $_SESSION['username'] = 'tutorialspoint';
-                  
-                  echo 'You have entered valid use name and password';
-               }else {
+                    $_SESSION['valid'] = true;
+                    $_SESSION['timeout'] = time();
+                    $_SESSION['username'] = 'tutorialspoint';
+                    echo 'You have entered valid use name and password';
+               } else {
                   $msg = 'Wrong username or password';
                }
             }
@@ -110,8 +124,11 @@
                name = "password" placeholder = "Password" required>
             <button class = "login_button" type = "submit" 
                name = "login">Login</button>
-            <button class = "login_button" type = "submit" 
-               name = "sign_up">Sign Up</button>
+         </form>
+         <form>
+            <button class = "signup_button" type = "submit"
+                formaction="signup.php" 
+                name = "sign_up">Sign Up</button>
          </form>
       </div> 
    </body>
